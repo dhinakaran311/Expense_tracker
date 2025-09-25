@@ -1,50 +1,76 @@
 package com.expensetracker.gui;
-
-import com.expensetracker.dao.DAO;
-import com.expensetracker.model.Category;
-import com.expensetracker.model.Expense;
-
+//UI and Listerners
 import javax.swing.*;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.table.DefaultTableModel;
+//Models
+import com.expensetracker.model.Expense;
+import com.expensetracker.model.Category;
+//DAO
+//import com.expensetracker.dao.DAO;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Date;
-import java.time.LocalDateTime;
 
-public class MainGUI extends JFrame {
+public class MainGUI extends JFrame{
+    private JButton category;
+    private JButton expense;
 
-    private JButton CategoryButton;
-    private JButton ExpenseButton;
-
-    public MainGUI() {
-        intitComponents();
+    public MainGUI(){
+        initializeComponents();
         setupLayout();
-        // addEventHandlers();
+        setupListeners();
     }
-
-    private void intitComponents() {
+    private void  initializeComponents(){
         setTitle("Expense Tracker");
-        setSize(600, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(600,500);
         setLocationRelativeTo(null);
-        CategoryButton = new JButton("Manage Categories");
-        ExpenseButton = new JButton("Manage Expenses");
+        category = new JButton("Category");
+        expense = new JButton("Expense");
     }
 
-    // for panel
-    private void setupLayout() {
-        JPanel btnpanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 20));
-        btnpanel.add(CategoryButton);
-        btnpanel.add(ExpenseButton);
-        CategoryButton.setPreferredSize(new Dimension(200, 60));
-        CategoryButton.setFont(new Font("Arial", Font.BOLD, 12));
-        ExpenseButton.setPreferredSize(new Dimension(200, 60));
-        ExpenseButton.setFont(new Font("Arial", Font.BOLD, 12));
+    private void setupLayout(){
+        JPanel buttonPanel = new JPanel (new FlowLayout(FlowLayout.CENTER,20,20));
+        buttonPanel.add(category);
+        buttonPanel.add(expense);
+
+        category.setPreferredSize(new Dimension(250,100));
+        category.setFont(new Font("Arial",Font.BOLD,25));
+        expense.setPreferredSize(new Dimension(250,100));
+        expense.setFont(new Font("Arial",Font.BOLD,25));
 
         JPanel mainPanel = new JPanel(new GridBagLayout());
-        mainPanel.add(btnpanel);
-        add(mainPanel, BorderLayout.CENTER);
+        mainPanel.add(buttonPanel);
+
+        add(mainPanel,BorderLayout.CENTER);
     }
+    private void setupListeners(){
+        category.addActionListener(e->{
+            CategoryGUI categoryUI = new CategoryGUI();
+            categoryUI.setVisible(true);
+        });
+        expense.addActionListener(e->{
+            ExpenseGUI expenseUI = new ExpenseGUI();
+            expenseUI.setVisible(true);
+        });
+
+    }
+
 }
+class CategoryGUI extends JFrame{
+
+}
+class ExpenseGUI extends JFrame{
+
+}
+
+
+
+
+
