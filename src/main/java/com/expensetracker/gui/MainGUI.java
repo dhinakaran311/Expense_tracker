@@ -88,8 +88,8 @@ class CategoryGUI extends JFrame{
         categoryName = new JTextField(20);
         String[] columns = {"ID","Name"};
 
-        DefaultTableModel categoryTableModel = new DefaultTableModel(columns,0);
-        JTable categoryTable = new JTable(categoryTableModel);
+        categoryTableModel = new DefaultTableModel(columns,0);
+        categoryTable = new JTable(categoryTableModel);
         categoryTable.setDefaultEditor(Object.class, null);
         categoryTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
@@ -125,9 +125,22 @@ class CategoryGUI extends JFrame{
     private void SetupEventListeners(){
         addCategory.addActionListener((e)->{addCategory();});
     }
+    private void updateCategoryTable(List<Category> categories) {
+        // Clear existing data
+        categoryTableModel.setRowCount(0);
+        
+        // Add categories to the table model
+        for (Category category : categories) {
+            categoryTableModel.addRow(new Object[]{
+                category.getCategory_id(),
+                category.getName()
+            });
+        }
+    }
+    
     private void loadCategory(){
         try{
-            List<Category> categories =  expenseDAO.getAllcat();
+            List<Category> categories = categoryDAO.getAllCategories();
             updateCategoryTable(categories);
         }
         catch(Exception e){
@@ -143,7 +156,9 @@ class CategoryGUI extends JFrame{
             return;
         }
         try{
-            categoryDAO.addCategory(name);
+            Category category = new Category();
+            category.setName(name);
+            categoryDAO.addCategory(category);
             loadCategory();
         }
         catch(Exception e){
