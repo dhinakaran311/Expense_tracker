@@ -51,7 +51,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.expensetracker.Main</mainClass>
+                    <mainClass>com.expense_tracker.Main</mainClass>
                 </configuration>
             </plugin>
 
@@ -68,7 +68,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.expensetracker.Main</mainClass>
+                                    <mainClass>com.expense_tracker.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

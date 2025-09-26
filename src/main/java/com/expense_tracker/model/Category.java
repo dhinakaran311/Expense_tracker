@@ -1,10 +1,19 @@
-package com.expensetracker.model;
+package com.expense_tracker.model;
 public class Category{
     private int category_id ;
     private String name;
-    public Category(){
+    public Category() {
         this.category_id = 0;
         this.name = "";
+    }
+    
+    public Category(int category_id, String name) {
+        this.category_id = category_id;
+        this.name = name;
+    }
+    public Category(int category_id) {
+        this.category_id = category_id;
+        this.name = ""; 
     }
     public String getName() {
         return name;

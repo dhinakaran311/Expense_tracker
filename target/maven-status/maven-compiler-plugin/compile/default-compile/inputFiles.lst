@@ -1,6 +1,6 @@
-D:\Dk\Projects\Expense_tracker\src\main\java\com\expensetracker\model\Expense.java
-D:\Dk\Projects\Expense_tracker\src\main\java\com\expensetracker\dao\CategoryDAO.java
-D:\Dk\Projects\Expense_tracker\src\main\java\com\expensetracker\util\DatabaseUtil.java
-D:\Dk\Projects\Expense_tracker\src\main\java\com\expensetracker\gui\MainGUI.java
-D:\Dk\Projects\Expense_tracker\src\main\java\com\expensetracker\Main.java
-D:\Dk\Projects\Expense_tracker\src\main\java\com\expensetracker\model\Category.java
+D:\Dk\Projects\Expense_tracker\src\main\java\com\expense_tracker\Main.java
+D:\Dk\Projects\Expense_tracker\src\main\java\com\expense_tracker\util\DatabaseUtil.java
+D:\Dk\Projects\Expense_tracker\src\main\java\com\expense_tracker\model\Category.java
+D:\Dk\Projects\Expense_tracker\src\main\java\com\expense_tracker\dao\ExpenseDAO.java
+D:\Dk\Projects\Expense_tracker\src\main\java\com\expense_tracker\model\Expense.java
+D:\Dk\Projects\Expense_tracker\src\main\java\com\expense_tracker\gui\MainUI.java

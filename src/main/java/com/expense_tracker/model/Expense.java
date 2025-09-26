@@ -1,28 +1,34 @@
-package com.expensetracker.model;
+package com.expense_tracker.model;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Expense {
     private int expense_id;
+    private String name;
     private double amount;
     private Date date;
     private int category_id;
+    private String category_name;  // Add category name field
     private LocalDateTime time;
     private String description;
     public Expense(){
         this.expense_id = 0;
+        this.name = "";
         this.amount = 0.0;
         this.date = new Date();
         this.category_id = 0;
+        this.category_name = "";
         this.time = LocalDateTime.now();
         this.description = "";
     }
-    public Expense(int expense_id, double amount, Date date, int category_id, LocalDateTime time, String description) {
+    public Expense(int expense_id, String name, double amount, Date date, int category_id, String category_name, LocalDateTime time, String description) {
         this.expense_id = expense_id;
+        this.name = name;
         this.amount = amount;
         this.date = date;
         this.category_id = category_id;
+        this.category_name = category_name;
         this.time = time;           
         this.description = description;
     }
@@ -63,8 +69,22 @@ public class Expense {
         this.description = description;
     }
     public void setId(int int1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setId'");
+        this.expense_id = int1;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public String getCategory_name() {
+        return category_name;
+    }
+
+    public void setCategory_name(String category_name) {
+        this.category_name = category_name;
+    }
 }

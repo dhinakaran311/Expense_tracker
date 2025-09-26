@@ -1,4 +1,4 @@
-package com.expensetracker.util;
+package com.expense_tracker.util;
 
 import java.sql.Connection; 
 import java.sql.DriverManager; //JDBC API
