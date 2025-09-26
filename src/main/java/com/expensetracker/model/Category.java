@@ -18,6 +18,5 @@ public class Category{
     public void setCategory_id(int category_id) {
         this.category_id = category_id;
     }
-    
 
 }

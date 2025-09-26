@@ -62,5 +62,9 @@ public class Expense {
     public void setDescription(String description) {
         this.description = description;
     }
+    public void setId(int int1) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setId'");
+    }
 
 }

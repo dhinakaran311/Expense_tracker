@@ -1,5 +1,8 @@
+com\expensetracker\dao\CategoryDAO.class
 com\expensetracker\model\Expense.class
-com\expensetracker\model\Category.class
+com\expensetracker\gui\CategoryGUI.class
+com\expensetracker\gui\ExpenseGUI.class
 com\expensetracker\gui\MainGUI.class
-com\expensetracker\Main.class
 com\expensetracker\util\DatabaseUtil.class
+com\expensetracker\model\Category.class
+com\expensetracker\Main.class
