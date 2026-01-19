@@ -21,6 +21,20 @@ A desktop application for managing personal expenses with category organization,
 
 The Expense Tracker is a Java-based desktop application that helps users manage their personal finances by tracking expenses across different categories. The application provides an intuitive graphical interface for adding, updating, deleting, and viewing expenses with detailed categorization.
 
+## Screenshots
+
+### Main Menu
+![Main Menu](images/home.png)
+The application's main interface provides easy access to category and expense management.
+
+### Category Management
+![Category Management](images/category.png)
+Manage your expense categories with a simple, intuitive interface.
+
+### Expense Tracking
+![Expense Tracker](images/expensetracker.png)
+Add, update, and view expenses with detailed information including amount, category, and description.
+
 ## Features
 
 ### Category Management
